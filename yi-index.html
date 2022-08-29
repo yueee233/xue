@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title>购物流程</title>
+		<style>
+			.image_list{
+				position:relative; 
+               background-image:url("img/yi.png" ) ;
+               height: 700px;
+               width: 1280px;
+               background-repeat: no-repeat;
+               margin: auto;
+			}
+			#che{
+				position: relative;
+				width: 160px;
+				top: 200px;
+				left: 350px;
+			}
+			.fh{
+				position: absolute;
+				width: 100px;
+				left: 100px;
+				top: 50px;
+			}
+		</style>
+	</head>
+	<span style="font-size:24px;"><style type="text/css">
+		body{    
+			overflow-x: hidden;    
+ 			overflow-y: hidden; 
+     	 }    
+		</style></span>
+	<body>
+		<div class="image_list">
+			
+			<a href="1gw-index.html"><img src="img/a1.png"  id="che"onmouseover="d1()" onmouseout="p1()"/></a>
+		
+			<a href="index.html"><img src="img/fh.png"  class="fh"/></a>
+		</div>
+		
+		<script type="text/javascript">
+        function d1(){
+        	var img = document.getElementById('che');
+        	img.style.width = '180px';
+    		img.style.height = '180px';
+        }
+       
+        function p1(){
+        	var img = document.getElementById('che'); 
+        	img.style.width = '160px';
+    		img.style.height = '160px';
+        }
+        
+      </script>
+	</body>
+</html>

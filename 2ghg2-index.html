@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="refresh" content="7;url= defeat2-index.html "> 
+                                                                       <!--网址转到狼吃羊 -->
+    <meta charset="UTF-8"> 
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>过海关</title>
+    <style>
+*{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        height: 660px;
+        width: 900px;
+        border-radius: 4px;
+        border: 0.5px solid #e0e0e0;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-flow: column;
+        overflow: hidden;
+    }
+    .content{
+        width: calc(100% - 40px);
+        padding: 20px;
+        overflow-y: scroll;
+        flex: 1;
+    }
+    .content:hover::-webkit-scrollbar-thumb{
+        background:rgba(0,0,0,0.1);
+    }
+    .bubble{
+        max-width: 400px;
+        padding: 10px;
+        border-radius: 5px;
+        position: relative;
+        color: #000;
+        word-wrap:break-word;
+        word-break:normal; 
+    }
+    .item-left .bubble{
+        margin-left: 15px;
+        background-color: #fff;
+       
+    }
+    .item-left .bubble:before{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-top: 10px solid transparent;
+        border-right: 10px solid #fff;
+        border-bottom: 10px solid transparent;
+        left: -20px;
+    }
+    .item-right .bubble{
+        margin-right: 15px;
+        background-color: #9eea6a;
+       }
+    .item-right .bubble:before{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 10px solid #9eea6a;
+        border-top: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        right: -20px;
+         
+    }
+    .item{
+        margin-top: 15px;
+        display: flex;
+        width: 100%;
+    }
+    .item.item-right{
+        justify-content: flex-end;
+        animation:moveout1 0s ease forwards;
+        opacity: 0;
+    }
+    @keyframes moveout1{
+      	0% {opacity: 0; }
+      	90%{opacity: 0;}
+	100% {opacity: 1;}
+    }
+    .item.item-center{
+        justify-content: center;
+    }
+    .item.item-center span{
+        font-size: 12px;
+        padding: 2px 4px;
+        color: #fff;
+        background-color: #dadada;
+        border-radius: 3px;
+        -moz-user-select:none; /*火狐*/
+        -webkit-user-select:none; /*webkit浏览器*/
+        -ms-user-select:none; /*IE10*/
+        -khtml-user-select:none; /*早期浏览器*/
+        user-select:none;
+    }
+
+    .avatar img{
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+    }
+    
+    .avatar1 img{
+        width: 250px;
+        height: 100px;
+        
+    }
+   
+    .avatar2 img{
+    	
+        width: 25px;
+        height: 25px;
+        margin-top: 10px;
+    }
+    .input-area{
+        border-top:0.5px solid #e0e0e0;
+        height: 140px;
+        display: flex;
+        flex-flow: column;
+        background-color: #fff;
+    }
+    textarea{
+        flex: 1;
+        padding: 2px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        overflow-y: auto;
+        overflow-x: hidden;
+        outline:none;
+        resize:none;
+    }
+    .button-area{
+        display: flex;
+        height: 40px;
+        margin-right: 10px;
+        line-height: 40px;
+        padding: 5px;
+        justify-content: flex-end;
+    }
+    .button-area button{
+        width: 80px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        float: right;
+        cursor: pointer;
+    }
+
+    /* 设置滚动条的样式 */
+    ::-webkit-scrollbar {
+        width:10px;
+    }
+    /* 滚动槽 */
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow:inset006pxrgba(0,0,0,0.3);
+        border-radius:8px;
+    }
+    /* 滚动条滑块 */
+    ::-webkit-scrollbar-thumb {
+        border-radius:10px;
+        background:rgba(0,0,0,0);
+        -webkit-box-shadow:inset006pxrgba(0,0,0,0.5);
+    }
+    
+    #a{
+    	animation:moveout1 4s ease forwards;
+        opacity: 0;
+    }
+    
+    #b{
+    	animation:moveout1 4s ease forwards;
+        opacity: 0;
+    }
+    
+    #a:link{
+    	color:black;
+        text-decoration:none;
+        font-size:x-large;
+    }
+    
+    #a:hover {
+
+            color:red;
+
+            text-decoration:none;
+
+        }
+        
+        #b:hover {
+
+            color:red;
+
+            text-decoration:none;
+
+        }
+        
+        #b:link{
+    	color:black;
+        text-decoration:none;
+        font-size: x-large;
+    }
+    
+      #l3{
+    	animation:moveout1 1s ease forwards;
+        opacity: 0;
+    }
+    
+     #center3{
+    	animation:moveout1 1s ease forwards;
+        opacity: 0;
+    }
+   
+   #l2{
+    	animation:moveout1 1s ease forwards;
+        opacity: 0;
+    }
+    
+     #center2{
+    	animation:moveout1 1s ease forwards;
+        opacity: 0;
+    }
+    #y1{
+    	animation:moveout1 1s ease forwards;
+        opacity: 0;
+    }
+    #y2{
+    	animation:moveout1 3s ease forwards;
+        opacity: 0;
+    }
+    
+		</style>
+    <div class="container">
+        <div class="content">
+            <div class="item item-center"><span>6月20日 中午12:35</span></div>
+            <div class="item item-center"><span>你已添加了阿狼，现在可以开始聊天了。</span></div>
+            <div class="item item-left"><div class="avatar"><img src="img/ll.png" /></div><div class="bubble bubble-left">亲亲，你喜欢的宝贝降价了快来看看吧!!!</div></div>
+            
+            <div class="item item-right"><div class="bubble bubble-right">你好<br/>这个TG口红真的只要100元一支吗？保真吗？</div><div class="avatar"><img src="img/yy.png" /></div></div>
+            <div id='center1'><div class="item item-center"><span>6月20日 中午13:15</span></div></div>
+            
+            <div id='l1'><div class="item item-left"><div class="avatar"><img src="img/ll.png" /></div><div class="bubble bubble-left">我们这个是品牌方授权销售，本店保证正品销售！假一赔十！</br>我们的库存不多了，赶紧下手哦亲亲</div></div></div>
+            <div id='y1'><div class="item item-right"><div class="avatar1"><img src="img/hb.png" /></div><div class="avatar"><img src="img/yy.png" /></div></div></div>
+            <div id='center2'><div class="item item-center"><span>阿狼领取了你的红包</span></div>
+            <div class="item item-center"><span>6月25日 下午14:35</span></div></div>
+            <div id='l2'><div class="item item-left"><div class="avatar"><img src="img/ll.png" /></div><div class="bubble bubble-left">亲亲，你的快递已经发货啦，记得查收哦！</div></div></div>
+            <div id='center3'><div class="item item-center"><span>6月27日 下午18:57</span></div></div>
+            <div id='l3'><div class="item item-left"><div class="avatar"><img src="img/ll.png" /></div><div class="bubble bubble-left">亲亲，你的宝贝过海关时被扣下了，需要加缴关税80元，不然会被退回啦！</div></div></div>
+            <div id='y2'><div class="item item-right"> <div class="bubble bubble-right">什么意思？那你把我的钱退给我，我要退款！</div><div class="avatar"><img src="img/yy.png" /></div></div>
+            <div class="item item-center"><span>6月27日 下午21:39</span></div>
+            <div class="item item-right"><div class="avatar2"><img src="img/lh.png" /></div> <div class="bubble bubble-right">人呢？怎么不回消息？</div><div class="avatar"><img src="img/yy.png" /></div></div>
+            <div class="item item-center"><span>消息已发出，但被对方拒收了。</span></div></div>
+        </div>
+        
+
+        <div class="input-area">
+        
+            <textarea name="text" id="textarea"></textarea>
+            
+            <div class="button-area">
+                <button id="send-btn" onclick="send()">发 送</button>
+            </div>
+            
+        </div>
+        <script type="text/javascript"> 
+      function send(){
+        let text = document.querySelector('#textarea').value;
+        if(!text){
+            alert('请输入内容');
+            return ;
+        }
+        let item = document.createElement('div');
+        item.className = 'item item-right';
+        item.innerHTML = `<div class="bubble bubble-left">${text}</div><div class="avatar"><img src="../img/yy.png" /></div>`;
+        document.querySelector('.content').appendChild(item);
+        document.querySelector('#textarea').value = '';
+        document.querySelector('#textarea').focus();
+        //滚动条置底
+        let height = document.querySelector('.content').scrollHeight;
+        document.querySelector(".content").scrollTop = height;
+    }
+    
+
+
+</script>
+    </div>
+
